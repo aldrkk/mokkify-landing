@@ -1,0 +1,53 @@
+@import "src/styles/palette";
+@import "src/styles/mixins";
+@import "src/styles/global";
+
+.headerWrapper {
+  display: grid;
+  grid-template-rows: 32px 1fr;
+  grid-row-gap: 16px;
+  padding-top: 32px;
+
+  @include from($xs) {
+    grid-template-rows: unset;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 56px;
+    justify-content: space-between;
+  }
+
+  nav {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 8px;
+
+    @include from($xs) {
+      grid-template-rows: unset;
+      grid-template-columns: repeat(3, 1fr);
+      padding-top: 56px;
+      width: 383px;
+      justify-content: space-between;
+      align-items: center;
+      justify-self: end;
+    }
+  }
+}
+
+.link {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: $white;
+  z-index: 1000;
+  transition: color 200ms ease;
+
+  &:hover {
+    color: $light-blue;
+    cursor: pointer;
+    transition: color 200ms ease;
+  }
+}
+
+.activeLink {
+  border-bottom: 1px solid white;
+}

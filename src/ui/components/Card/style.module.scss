@@ -1,0 +1,39 @@
+@import "src/styles/palette";
+@import "src/styles/global";
+@import "src/styles/mixins";
+
+.cardWrapper {
+  width: 288px;
+  margin: 0 auto;
+
+  @include from($xs) {
+    width: 367px;
+    margin: 0;
+  }
+
+  .cardImage {
+    height: 160px;
+    width: 100%;
+    border-radius: 14px;
+    background: $gray-background;
+    padding: 53px 118px 57px 120px;
+    margin-bottom: 32px;
+
+    @include from($xs) {
+      padding: 60px 115px 57px 117px;
+      height: 250px;
+    }
+
+    img {
+      width: 133px;
+      height: 133px;
+    }
+  }
+
+  .cardHeader {
+    margin-bottom: 32px;
+  }
+
+  .cardDescription {
+  }
+}

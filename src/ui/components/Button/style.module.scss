@@ -1,0 +1,28 @@
+@import "src/styles/palette";
+
+.button {
+  box-sizing: border-box;
+  padding: 13px 56px;
+  color: $white;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: 1px solid white;
+  cursor: pointer;
+  background-color: transparent;
+  transition:
+    color 200ms ease,
+    border 200ms ease,
+    background-color 200ms ease;
+
+  &:hover {
+    border: 1px solid $light-blue;
+    background-color: $light-blue;
+    color: $white !important;
+    transition:
+      color 200ms ease,
+      border 200ms ease,
+      background-color 200ms ease;
+  }
+}

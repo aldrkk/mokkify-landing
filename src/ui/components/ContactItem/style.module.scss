@@ -1,0 +1,23 @@
+@import "src/styles/palette";
+
+.contactWrapper {
+  display: grid;
+  grid-template-columns: 72px max-content;
+  grid-column-gap: 24px;
+  align-items: center;
+
+  img {
+    border-radius: 50%;
+  }
+
+  .name {
+    margin-bottom: 12px;
+  }
+
+  .socialsWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 24px);
+    grid-column-gap: 8px;
+    align-items: center;
+  }
+}

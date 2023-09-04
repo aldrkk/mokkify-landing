@@ -1,0 +1,207 @@
+@import "global";
+@import "mixins";
+@import "palette";
+
+@mixin gradient-background {
+  background: linear-gradient(108deg, $dark-purple -0.59%, $main-purple 100.72%);
+}
+
+.mainSection {
+  @include gradient-background;
+
+  z-index: $base-z-index;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 64px;
+
+  @include from($xl) {
+    height: 100vh;
+    padding: 0;
+  }
+
+  main {
+    @include from($xs) {
+      display: block;
+      margin-top: calc(29% - 115px);
+    }
+  }
+
+  .header {
+    display: none;
+    margin-bottom: 32px;
+
+    @include from($xs) {
+      display: block;
+    }
+  }
+
+  .mainSectionDescription {
+    margin: 32px 0;
+
+    @include from($xs) {
+      margin: 0 0 96px;
+      width: 664px;
+    }
+  }
+
+  .mainImage {
+    display: none;
+
+    @include from($xl) {
+      display: block;
+    }
+
+    position: absolute;
+    right: 0;
+    z-index: $image-z-index;
+    top: -100px;
+    height: 130vh;
+  }
+}
+
+.maximizeSection {
+  padding: 64px 0;
+
+  @include from($xs) {
+    padding: 128px 0 270px;
+  }
+
+  .maximizeSectionHeader {
+    margin-bottom: 32px;
+  }
+
+  .maximizeSectionDescription {
+    margin: 0 auto 96px;
+    text-align: center;
+    width: 80%;
+  }
+
+  .maximizeCards {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 16px;
+
+    @include from($xs) {
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: space-between;
+    }
+  }
+}
+
+.sliderSection {
+  padding: 64px 0;
+  background-color: $gray-background;
+
+  @include from($xs) {
+    padding: 128px 0 98px;
+  }
+
+  .sliderHeader {
+    margin-bottom: 96px;
+    text-align: center;
+  }
+
+  .sliderWrapper {
+    width: calc(100% - 16px);
+    margin: 0 auto;
+    position: relative;
+
+    @include from($xs) {
+      width: calc(100% - 200px);
+    }
+
+    .leftArrow {
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      left: -97px;
+      top: calc(50% - 57px);
+
+      @include from($xs) {
+        display: block;
+      }
+    }
+
+    .rightArrow {
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      right: -97px;
+      top: calc(50% - 57px);
+
+      @include from($xs) {
+        display: block;
+      }
+    }
+  }
+
+  .nav {
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+    justify-content: center;
+    width: 129px !important;
+
+    @include from($xs) {
+      justify-content: space-between;
+    }
+
+    @include from($md) {
+      width: 100%;
+      justify-content: flex-start;
+    }
+  }
+
+  .bullet {
+    position: relative;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $main-purple;
+    border-radius: 50%;
+    display: block;
+
+    @include from($md) {
+      margin-right: 0;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 20px;
+      top: -10px;
+    }
+  }
+
+  .bulletActive {
+    background-color: $main-purple;
+  }
+}
+
+.contacts {
+  @include gradient-background;
+
+  padding: 32px 0 16px;
+
+  .contactsWrapper {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 48px;
+    margin: 0 auto 64px;
+
+    @include from($xs) {
+      grid-template-rows: unset;
+      width: calc(100% - 580px);
+      margin: 0 auto 92px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 128px;
+    }
+  }
+
+  .contactsHeader {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+}

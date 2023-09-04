@@ -1,0 +1,26 @@
+@import "src/styles/palette";
+
+.h1 {
+  color: $white;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.h2 {
+  color: $black;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.h3 {
+  color: $white;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}

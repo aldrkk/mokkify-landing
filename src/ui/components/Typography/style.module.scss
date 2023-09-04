@@ -1,0 +1,30 @@
+@import "src/styles/palette";
+
+.light {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.regular {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.bold {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.white {
+  color: $white;
+}
+
+.black {
+  color: $black;
+}

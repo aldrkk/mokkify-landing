@@ -1,0 +1,15 @@
+@import "src/styles/mixins";
+@import "src/styles/global";
+
+.container {
+  margin: 0 auto;
+  width: calc(100% - 32px);
+
+  @include from($lg) {
+    width: calc(100% - 620px);
+  }
+
+  @include from($xlg) {
+    width: calc(100% - 920px);
+  }
+}
