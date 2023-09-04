@@ -1,16 +1,16 @@
-import {useRef} from "react"
-import {Autoplay, Pagination} from "swiper"
-import type {SwiperRef} from "swiper/react"
-import {Swiper, SwiperSlide} from "swiper/react"
+import { useRef } from "react"
+import { Autoplay, Pagination } from "swiper"
+import { Swiper, SwiperSlide } from "swiper/react"
 
 import style from "src/styles/mainPage.module.scss"
 
 import MainBackground from "@ui/MainBackground"
-import {Button, Card, ContactItem, Container, Footer, Header, Headers, Typography} from "@ui/components"
+import { Button, Card, ContactItem, Container, Footer, Header, Headers, Typography } from "@ui/components"
 
-import {useSwiperNavigationRef} from "@hooks/useSwiperNavigationRef"
+import { useSwiperNavigationRef } from "@hooks/useSwiperNavigationRef"
 
-import type {NextPage} from "next"
+import type { NextPage } from "next"
+import type { SwiperRef } from "swiper/react"
 
 import "swiper/css"
 
@@ -50,7 +50,7 @@ const contacts = [
     name: "Aleksandr Krupoderov",
     socials: {
       github: "https://github.com/aldrkk",
-      linkedin: "https://www.linkedin.com/in/aleksandr-krupoderov",
+      linkedin: "https://www.linkedin.com/in/aleksandr-krupoderov"
     }
   }
 ]
@@ -75,10 +75,10 @@ const Homepage: NextPage = () => {
       <title>Mokkify</title>
       <section className={style.mainSection}>
         <Container>
-          <MainBackground className={style.mainImage}/>
-          <Header/>
+          <MainBackground className={style.mainImage} />
+          <Header />
           <main>
-            <Headers.H1 className={style.header} text="Mokkify"/>
+            <Headers.H1 className={style.header} text="Mokkify" />
             <Typography
               className={style.mainSectionDescription}
               text="A user-friendly and efficient service designed to streamline your
@@ -87,14 +87,14 @@ const Homepage: NextPage = () => {
               type="light"
               color="white"
             />
-            <Button href="https://demo.mokkify.dev/" text="Try it now"/>
+            <Button href="https://demo.mokkify.dev/" text="Try it now" />
           </main>
         </Container>
       </section>
 
       <section className={style.maximizeSection}>
         <Container>
-          <Headers.H2 text="Maximize Your Development Efficiency" className={style.maximizeSectionHeader}/>
+          <Headers.H2 text="Maximize Your Development Efficiency" className={style.maximizeSectionHeader} />
           <Typography
             text="Discover the power of  Mokkify - a versatile tool designed to streamline your web
           development process and save you time. Experience a higher level of efficiency and unleash your true
@@ -105,7 +105,7 @@ const Homepage: NextPage = () => {
           />
           <div className={style.maximizeCards}>
             {cards.map(item => (
-              <Card key={item.title} imageUrl={item.imageUrl} title={item.title} description={item.description}/>
+              <Card key={item.title} imageUrl={item.imageUrl} title={item.title} description={item.description} />
             ))}
           </div>
         </Container>
@@ -113,14 +113,14 @@ const Homepage: NextPage = () => {
 
       <section className={style.sliderSection}>
         <Container>
-          <Headers.H2 text="Convenient and intuitive UI" className={style.sliderHeader}/>
+          <Headers.H2 text="Convenient and intuitive UI" className={style.sliderHeader} />
           <div className={style.sliderWrapper}>
             <div onClick={handlePrevSlider} className={style.leftArrow}>
-              <img src="./images/slider/left.svg" alt="left"/>
+              <img src="./images/slider/left.svg" alt="left" />
             </div>
             <Swiper
               slidesPerView="auto"
-              autoplay={{delay: 5000, disableOnInteraction: false}}
+              autoplay={{ delay: 5000, disableOnInteraction: false }}
               loop
               modules={[Pagination, Autoplay]}
               pagination={pagination}
@@ -128,34 +128,35 @@ const Homepage: NextPage = () => {
               speed={600}
             >
               <SwiperSlide>
-                <img src="./images/slider/1.png" alt="1"/>
+                <img src="./images/slider/1.png" alt="1" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="./images/slider/1.png" alt="1"/>
+                <img src="./images/slider/1.png" alt="1" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="./images/slider/1.png" alt="1"/>
+                <img src="./images/slider/1.png" alt="1" />
               </SwiperSlide>
             </Swiper>
             <div onClick={handleNextSlide} className={style.rightArrow}>
-              <img src="./images/slider/right.svg" alt="right"/>
+              <img src="./images/slider/right.svg" alt="right" />
             </div>
 
-            <div className={style.nav} ref={paginationContainerRef}/>
+            <div className={style.nav} ref={paginationContainerRef} />
           </div>
         </Container>
       </section>
 
       <section className={style.contacts}>
         <Container>
-          <Headers.H3 className={style.contactsHeader} text="Contributors"/>
+          <Headers.H3 className={style.contactsHeader} text="Contributors" />
 
           <div className={style.contactsWrapper}>
-            {contacts.map(item => <ContactItem key={item.name} imageUrl={item.imageUrl} name={item.name}
-                                               socials={item.socials}/>)}
+            {contacts.map(item => (
+              <ContactItem key={item.name} imageUrl={item.imageUrl} name={item.name} socials={item.socials} />
+            ))}
           </div>
 
-          <Footer/>
+          <Footer />
         </Container>
       </section>
     </div>
