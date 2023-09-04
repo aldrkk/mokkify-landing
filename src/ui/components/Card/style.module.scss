@@ -24,6 +24,16 @@
       height: 250px;
     }
 
+    @include from($xxl) {
+      padding: 60px 138px 57px 130px;
+      height: 200px;
+    }
+
+    @include from($xxxl) {
+      padding: 75px 127px 74px 128px;
+      height: 250px;
+    }
+
     img {
       width: 133px;
       height: 133px;

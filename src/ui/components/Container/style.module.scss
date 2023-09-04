@@ -5,6 +5,14 @@
   margin: 0 auto;
   width: calc(100% - 32px);
 
+  @include from($xl) {
+    width: calc(100% - 64px);
+  }
+
+  @include from($xxl) {
+    width: calc(100% - 128px);
+  }
+
   @include from($lg) {
     width: calc(100% - 620px);
   }

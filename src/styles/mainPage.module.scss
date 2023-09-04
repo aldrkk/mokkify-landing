@@ -21,7 +21,10 @@
 
   main {
     @include from($xs) {
-      display: block;
+      margin-top: 150px;
+    }
+
+    @include from($md) {
       margin-top: calc(29% - 115px);
     }
   }
@@ -40,29 +43,55 @@
 
     @include from($xs) {
       margin: 0 0 96px;
+    }
+
+    @include from($md) {
       width: 664px;
     }
   }
 
   .mainImage {
     display: none;
-
-    @include from($xl) {
-      display: block;
-    }
-
     position: absolute;
     right: 0;
     z-index: $image-z-index;
     top: -100px;
     height: 130vh;
+
+    @include from($xl) {
+      display: block;
+      top: -65px;
+      right: -30px;
+    }
+
+    @include from($xxl) {
+      top: -70px;
+      right: -230px;
+    }
+
+    @include from($xxxl) {
+      right: -37px;
+    }
+
+    @include from($lg) {
+      right: -150px;
+    }
   }
 }
 
 .maximizeSection {
   padding: 64px 0;
 
-  @include from($xs) {
+  @include from($md) {
+    padding: 96px 0;
+  }
+
+  @include from($xl) {
+    padding: 128px;
+    justify-content: center;
+  }
+
+  @include from($xxl) {
     padding: 128px 0 270px;
   }
 
@@ -82,7 +111,13 @@
     grid-row-gap: 16px;
 
     @include from($xs) {
-      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include from($xxl) {
+      grid-template-rows: unset;
+      grid-template-columns: repeat(3, 367px);
       justify-content: space-between;
     }
   }
@@ -107,6 +142,10 @@
     position: relative;
 
     @include from($xs) {
+      width: calc(100% - 32px);
+    }
+
+    @include from($md) {
       width: calc(100% - 200px);
     }
 
@@ -117,7 +156,7 @@
       left: -97px;
       top: calc(50% - 57px);
 
-      @include from($xs) {
+      @include from($xl) {
         display: block;
       }
     }
@@ -129,7 +168,7 @@
       right: -97px;
       top: calc(50% - 57px);
 
-      @include from($xs) {
+      @include from($xl) {
         display: block;
       }
     }
@@ -192,12 +231,17 @@
     margin: 0 auto 64px;
 
     @include from($xs) {
-      grid-template-rows: unset;
-      width: calc(100% - 580px);
       margin: 0 auto 92px;
+      justify-content: center;
+    }
+
+    @include from($md) {
+      width: calc(100% - 580px);
+      grid-template-rows: unset;
       grid-template-columns: repeat(2, 1fr);
       grid-column-gap: 128px;
     }
+
   }
 
   .contactsHeader {

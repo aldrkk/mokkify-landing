@@ -10,9 +10,14 @@
 
   @include from($xs) {
     grid-template-rows: unset;
-    grid-template-columns: repeat(2, 1fr);
-    padding-top: 56px;
     justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 131px max-content;
+  }
+
+  @include from($md) {
+    padding-top: 56px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   nav {
@@ -22,12 +27,17 @@
 
     @include from($xs) {
       grid-template-rows: unset;
-      grid-template-columns: repeat(3, 1fr);
-      padding-top: 56px;
-      width: 383px;
-      justify-content: space-between;
+      grid-template-columns: repeat(3, 80px);
+      grid-column-gap: 16px;
       align-items: center;
       justify-self: end;
+      margin-left: auto;
+    }
+
+    @include from($md) {
+      width: 383px;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: space-between;
     }
   }
 }
