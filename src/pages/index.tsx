@@ -1,3 +1,4 @@
+import Head from "next/head"
 import { useRef } from "react"
 import { Autoplay, Pagination } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -72,7 +73,10 @@ const Homepage: NextPage = () => {
 
   return (
     <div>
-      <title>Mokkify</title>
+      <Head>
+        <title>Mokkify</title>
+      </Head>
+
       <section className={style.mainSection}>
         <Container>
           <MainBackground className={style.mainImage} />
@@ -84,7 +88,7 @@ const Homepage: NextPage = () => {
               text="A user-friendly and efficient service designed to streamline your
             web development process. Mock API endpoints, simulate server responses, test webhooks,
             and fine-tune your web applications with real-time updates"
-              type="light"
+              type="thin"
               color="white"
             />
             <Button href="https://demo.mokkify.dev/" text="Try it now" />
@@ -96,7 +100,7 @@ const Homepage: NextPage = () => {
         <Container>
           <Headers.H2 text="Maximize Your Development Efficiency" className={style.maximizeSectionHeader} />
           <Typography
-            text="Discover the power of  Mokkify - a versatile tool designed to streamline your web
+            text="Discover the power of Mokkify - a versatile tool designed to streamline your web
           development process and save you time. Experience a higher level of efficiency and unleash your true
           development potential with Mokkify today!"
             type="regular"
