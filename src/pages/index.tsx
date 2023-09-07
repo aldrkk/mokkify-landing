@@ -88,7 +88,7 @@ const Homepage: NextPage = () => {
               text="A user-friendly and efficient service designed to streamline your
             web development process. Mock API endpoints, simulate server responses, test webhooks,
             and fine-tune your web applications with real-time updates"
-              type="thin"
+              type="light"
               color="white"
             />
             <Button href="https://demo.mokkify.dev/" text="Try it now" />
