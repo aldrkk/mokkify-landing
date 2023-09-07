@@ -61,20 +61,12 @@
     @include from($xl) {
       display: block;
       top: -65px;
-      right: -30px;
+      right: -483px;
     }
 
     @include from($xxl) {
       top: -70px;
-      right: -230px;
-    }
-
-    @include from($xxxl) {
-      right: -37px;
-    }
-
-    @include from($lg) {
-      right: -150px;
+      right: -500px;
     }
   }
 }

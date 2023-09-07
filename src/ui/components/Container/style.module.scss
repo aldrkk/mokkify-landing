@@ -2,8 +2,10 @@
 @import "src/styles/global";
 
 .container {
+  position: relative;
   margin: 0 auto;
   width: calc(100% - 32px);
+  max-width: 1300px;
 
   @include from($xl) {
     width: calc(100% - 64px);
