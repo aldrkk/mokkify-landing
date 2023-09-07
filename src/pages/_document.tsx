@@ -5,7 +5,14 @@ const Document = () => {
   return (
     <Html lang="en">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="Description" content="Webhook service" />
+      <meta
+        name="Description"
+        content="Mock API endpoints, simulate server responses, test webhooks, and fine-tune your web applications with real-time updates"
+      />
+      <meta
+        name="keywords"
+        content="REST, API, mock, webhook, nodejs, Nextjs, npm, yarn, RESTful API, self-hosted, github"
+      />
       <Script crossOrigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js" />
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
