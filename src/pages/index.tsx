@@ -23,10 +23,10 @@ const cards = [
       "Save time and resources by simulating API endpoints and responses with just a few clicks. Focus on developing and fine-tuning your application without the need to set up infrastructures."
   },
   {
-    title: "Seamless Webhook Testing",
+    title: "Self-hosted solution",
     imageUrl: "./images/cards/pattern.png",
     description:
-      "Ensure the reliability of your webhook integrations through our real-time testing tools. Easily manage incoming and outgoing webhooks, adapting them to fit your specific needs."
+      "A self-hosted solution with authentication provides increased privacy and control. Manage your own servers without sharing sensitive data with third-party providers. Secure and customizable for your needs."
   },
   {
     title: "Rapid Development and Iteration",
@@ -91,7 +91,7 @@ const Homepage: NextPage = () => {
               type="light"
               color="white"
             />
-            <Button href="https://demo.mokkify.dev/" text="Try it now" />
+            <Button href="https://demo.mokkify.dev/" text="Try demo" />
           </main>
         </Container>
       </section>

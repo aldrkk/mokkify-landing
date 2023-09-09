@@ -7,7 +7,7 @@ const Document = () => {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta
         name="Description"
-        content="Mock API endpoints, simulate server responses, test webhooks, and fine-tune your web applications with real-time updates"
+        content="Self-hosted mock API endpoints, simulate server responses, test webhooks, and fine-tune your web applications with real-time updates"
       />
       <meta
         name="keywords"
