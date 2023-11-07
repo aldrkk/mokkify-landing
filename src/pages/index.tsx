@@ -1,6 +1,6 @@
 import Head from "next/head"
 import { useRef } from "react"
-import { Autoplay, Pagination } from "swiper"
+import { Autoplay, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 import style from "src/styles/mainPage.module.scss"
@@ -39,7 +39,7 @@ const cards = [
 const contacts = [
   {
     imageUrl: "./images/contacts/avatars/mike.jpeg",
-    name: "Mikhail Kabanov",
+    name: "Mike Kabanov",
     socials: {
       github: "https://github.com/icevl",
       linkedin: "https://www.linkedin.com/in/mikekabanov",
@@ -127,6 +127,7 @@ const Homepage: NextPage = () => {
               autoplay={{ delay: 5000, disableOnInteraction: false }}
               loop
               modules={[Pagination, Autoplay]}
+              data-swiper-autoplay="2000"
               pagination={pagination}
               ref={sliderRef}
               speed={600}
