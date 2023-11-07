@@ -22,7 +22,7 @@ export const ContactItem: FC<Props> = ({ imageUrl, name, socials }) => {
     <div className={style.contactWrapper}>
       <img src={imageUrl} alt="avatar" />
       <div>
-        <Typography text={name} type="bold" color="white" className={style.name} />
+        <Typography text={name} type="regular" color="white" className={style.name} />
         {socials && (
           <div className={style.socialsWrapper}>
             {socials.github && (
